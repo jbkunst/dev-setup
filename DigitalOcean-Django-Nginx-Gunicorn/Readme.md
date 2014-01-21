@@ -1,4 +1,4 @@
-# How To Install and Configure Django with Postgres, Nginx, and Gunicorn
+## How To Install and Configure Django with Postgres, Nginx, and Gunicorn
 
 [source](https://www.digitalocean.com/community/articles/how-to-install-and-configure-django-with-postgres-nginx-and-gunicorn)
 
@@ -85,7 +85,7 @@ cd /opt/myenv
 sudo nano gunicorn_config.py
 ```
 
-The file must contain
+The file must contain:
 ```
 command = '/opt/myenv/bin/gunicorn'
 pythonpath = '/opt/myenv/mysite'
@@ -98,11 +98,6 @@ user = 'nobody'
 /opt/myenv/bin/gunicorn -c /opt/myenv/gunicorn_config.py mysite.wsgi
 ```
 
-### 10
-```
-sudo service nginx start
-```
-
 ### 11
 
 ```
@@ -112,9 +107,9 @@ cd myproject
 python manage.py collectstatic
 ```
 
-### 10 cont
-
+### 10
 ```
+sudo service nginx start
 sudo nano /etc/nginx/sites-available/myproject
 ```
 
