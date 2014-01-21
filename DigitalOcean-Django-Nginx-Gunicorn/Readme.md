@@ -2,6 +2,11 @@
 
 [source](https://www.digitalocean.com/community/articles/how-to-install-and-configure-django-with-postgres-nginx-and-gunicorn)
 
+You must have:
+- A droplet in digitalOcean
+- Other thing
+- One more
+
 ### 1
 
 ```
