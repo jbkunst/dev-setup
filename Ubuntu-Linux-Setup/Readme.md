@@ -13,11 +13,42 @@ Need reboot.
 sudo apt-get install git
 ```
 
-
 ### Generate Key
 ```
 ssh-keygen
 cat ~/.ssh/id_rsa.pub
+```
+
+### Python & others
+
+```
+apt-get install python-de
+```
+
+#### PIP
+```
+sudo apt-get install python-pip
+```
+
+How to use pip
+```
+sudo pip-python install virtualenv
+pip freeze > requieriments.txt
+pip install -r requieriments.txt
+```
+
+#### Virtualenv
+
+```
+sudo apt-get install python-virtualenv
+```
+
+
+How to use virtualenv
+```
+virtualenv myenv
+source myenv
+deactivate myenv
 ```
 
 
@@ -28,6 +59,21 @@ sudo add-apt-repository ppa:webupd8team/sublime-text-3
 sudo apt-get update
 sudo apt-get install sublime-text-installer
 ```
+
+### R
+```
+sudo nano /etc/apt/sources.list    
+deb http://cran.rstudio.com/bin/linux/ubuntu precise/
+```
+
+```
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
+```
+
+sudo add-apt-repository ppa:marutter/rdev
+sudo apt-get install r-base
+
+
 
 ### Open Terminal
 ```
