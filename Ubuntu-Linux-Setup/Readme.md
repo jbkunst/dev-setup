@@ -70,9 +70,10 @@ deb http://cran.rstudio.com/bin/linux/ubuntu precise/
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
 ```
 
+```
 sudo add-apt-repository ppa:marutter/rdev
 sudo apt-get install r-base
-
+```
 
 
 ### Open Terminal
