@@ -1,6 +1,7 @@
 ### First, the first
 ```
-
+sudo apt-get update && sudo apt-get upgrade
+sudo apt-get install ubuntu-restricted-extras
 ```
 
 ### Zsh and oh-my-zsh
