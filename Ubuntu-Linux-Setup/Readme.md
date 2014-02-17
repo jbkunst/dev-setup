@@ -8,6 +8,7 @@ sudo apt-get install ubuntu-restricted-extras
 ```
 sudo apt-get install zsh
 wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
+chsh -s /bin/zsh
 ZSH=$HOME/.oh-my-zsh
 ```
 
@@ -17,6 +18,8 @@ Need reboot.
 ### Git
 ```
 sudo apt-get install git
+git config --global user.email "jbkunst@gmail.com"
+git config --global user.name "Joshua"
 ```
 
 ### Generate Key
