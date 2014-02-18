@@ -1,3 +1,10 @@
+### Índice
+1. [Fisr](#entorno-de-desarrollo-y-dependencias)
+2. [Zsh](#Zsh-and-oh-my-zsh)
+2. [Git](#git)
+
+
+
 ### First, the first
 ```
 sudo apt-get update && sudo apt-get upgrade
@@ -72,7 +79,7 @@ sudo apt-get install sublime-text-installer
 ### R
 ```
 sudo nano /etc/apt/sources.list    
-deb http://cran.rstudio.com/bin/linux/ubuntu precise/
+deb http://cran.rstudio.com/bin/linux/ubuntu )precise,saucy)/
 ```
 
 ```
@@ -81,6 +88,8 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
 
 ```
 sudo add-apt-repository ppa:marutter/rdev
+sudo apt-get update
+sudo apt-get upgrade
 sudo apt-get install r-base
 ```
 
@@ -89,4 +98,9 @@ sudo apt-get install r-base
 ```
 sudo apt-get install nautilus-open-terminal
 nautilus -q
+```
+
+### Mysql
+```
+sudo apt-get install mysql-server libmysqlclient-dev
 ```
