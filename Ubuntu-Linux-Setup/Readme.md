@@ -1,9 +1,16 @@
 ### Índice
-1. [Fisr](#entorno-de-desarrollo-y-dependencias)
-2. [Zsh](#Zsh-and-oh-my-zsh)
-2. [Git](#git)
+1. [Fisr](#first-the-firts)
+2. [Zsh](#zsh-and-oh-my-zsh)
+3. [Git](#git)
+4. [Python](#python)
+	1. [PIP](#pip)
+	2. [Virtualenv](#virtualenv)
+5. [Sublime](#sublime)
+6. [R](#r)
+7. [Open terminal](#open-terminal)
+8. [MySQL](#myslq)
 
-
+***
 
 ### First, the first
 ```
@@ -29,7 +36,7 @@ git config --global user.email "jbkunst@gmail.com"
 git config --global user.name "Joshua"
 ```
 
-### Generate Key
+#### Generate Key
 ```
 ssh-keygen
 cat ~/.ssh/id_rsa.pub
@@ -38,7 +45,7 @@ cat ~/.ssh/id_rsa.pub
 ### Python & others
 
 ```
-apt-get install python-de
+apt-get install python-dev
 ```
 
 #### PIP
