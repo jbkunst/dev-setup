@@ -1,5 +1,6 @@
-### Índice
-1. [Fisr](#first-the-firts)
+### Index
+
+1. [Fisr](#first-the-first)
 2. [Zsh](#zsh-and-oh-my-zsh)
 3. [Git](#git)
 4. [Python](#python)
@@ -42,7 +43,7 @@ ssh-keygen
 cat ~/.ssh/id_rsa.pub
 ```
 
-### Python & others
+### Python
 
 ```
 apt-get install python-dev
