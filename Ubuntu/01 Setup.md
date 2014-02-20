@@ -8,7 +8,6 @@
 	2. [Virtualenv](#virtualenv)
 5. [Sublime](#sublime)
 6. [R](#r)
-7. [Open terminal](#open-terminal)
 8. [MySQL](#myslq)
 
 ***
@@ -75,8 +74,6 @@ source myenv
 deactivate myenv
 ```
 
-
-
 ### Sublime 3
 ```
 sudo add-apt-repository ppa:webupd8team/sublime-text-3
@@ -99,13 +96,6 @@ sudo add-apt-repository ppa:marutter/rdev
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install r-base
-```
-
-
-### Open Terminal
-```
-sudo apt-get install nautilus-open-terminal
-nautilus -q
 ```
 
 ### Mysql
