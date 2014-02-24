@@ -81,6 +81,10 @@ sudo apt-get update
 sudo apt-get install sublime-text-installer
 ```
 
+Don't forget enable the (package control)[https://sublime.wbond.net/installation#st3]
+
+
+
 ### R
 ```
 sudo nano /etc/apt/sources.list    
