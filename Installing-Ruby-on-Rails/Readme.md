@@ -1,6 +1,6 @@
 ## Installing Ruby on Rails
 
-(Soure)[http://www.vensign.com/como-instalar-ruby-on-rails-en-ubuntu-12-04-lts.html]
+[Source](http://www.vensign.com/como-instalar-ruby-on-rails-en-ubuntu-12-04-lts.html)
 
 #### Update
 ```
@@ -28,4 +28,16 @@ sudo apt-get install nodejs
 ```
 rvm install 1.9.3
 ruby -v
+```
+#### Install Rails
+```
+gem install rails
+```
+
+#### Test
+
+```
+rails new nombre_aplicacion
+cd nombre_aplicacion
+rails server
 ```
