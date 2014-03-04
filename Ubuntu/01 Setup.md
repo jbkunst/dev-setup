@@ -88,7 +88,7 @@ Don't forget enable the (package control)[https://sublime.wbond.net/installation
 ### R
 ```
 sudo nano /etc/apt/sources.list    
-deb http://cran.rstudio.com/bin/linux/ubuntu )precise,saucy)/
+deb http://cran.rstudio.com/bin/linux/ubuntu saucy/
 ```
 
 ```
