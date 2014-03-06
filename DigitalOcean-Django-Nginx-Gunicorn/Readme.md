@@ -46,6 +46,7 @@ deactivate
 sudo apt-get install libpq-dev python-dev
 sudo apt-get install postgresql postgresql-contrib
 
+sudo service postgresql start
 sudo su - postgres
 createdb mydb
 createuser -P
