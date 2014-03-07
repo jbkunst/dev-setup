@@ -17,16 +17,11 @@ sudo apt-get upgrade
 ### 1.1
 
 ```
-sudo apt-get install git
+sudo apt-get install git libmysqlclient-dev python-dev python-virtualenv
 ```
+
 
 ### 2
-
-```
-sudo apt-get install python-virtualenv
-```
-
-### 2.1
 
 ```
 sudo virtualenv /opt/myenv
