@@ -102,6 +102,12 @@ sudo apt-get upgrade
 sudo apt-get install r-base
 ```
 
+Don't forget execute the next line in the terminal for install "curl" packages:
+
+```
+sudo apt-get install libcurl4-openssl-dev
+```
+
 ### Mysql
 ```
 sudo apt-get install mysql-server libmysqlclient-dev
