@@ -108,6 +108,13 @@ Don't forget execute the next line in the terminal for install "curl" packages:
 sudo apt-get install libcurl4-openssl-dev
 ```
 
+Consider the next lines for use rmkarkdown
+
+```
+sudo apt-get install tex
+sudo apt-get install texlive-latex-recommended
+```
+
 ### Mysql
 ```
 sudo apt-get install mysql-server libmysqlclient-dev
