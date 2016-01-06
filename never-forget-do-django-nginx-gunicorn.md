@@ -1,11 +1,6 @@
-## How To Install and Configure Django with Postgres, Nginx, and Gunicorn
+## Django with Postgres, Nginx, and Gunicorn
 
 [source](https://www.digitalocean.com/community/articles/how-to-install-and-configure-django-with-postgres-nginx-and-gunicorn)
-
-You must have:
-- A droplet in digitalOcean
-- Other thing
-- One more
 
 ### 1
 
