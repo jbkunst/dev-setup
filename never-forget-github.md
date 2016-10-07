@@ -11,3 +11,10 @@ source: http://lrotherfield.com/blog/delete-remote-git-repo-to-specific-commit/
 git pull https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git BRANCH_NAME
 ```
 source: https://help.github.com/articles/merging-an-upstream-repository-into-your-fork/
+
+
+## Caching your GitHub password in Git (windows)
+```
+git config --global credential.helper wincred
+```
+source: https://help.github.com/articles/caching-your-github-password-in-git/
