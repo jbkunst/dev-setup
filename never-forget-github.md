@@ -1,5 +1,11 @@
 # Never Forget Github
 
+## Configure User
+```
+git config --global user.email "jbkunst@gmail.com"
+git config --global user.name "Joshua"
+```
+
 ## Delete back to specific commit on remote repository with Git
 ```
 git reset --hard fj5789sufj
