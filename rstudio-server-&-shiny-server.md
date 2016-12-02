@@ -23,13 +23,19 @@ sudo sh -c 'echo "/var/swap.1 swap swap defaults 0 0 " >> /etc/fstab'
 ## devtools Dependencies
 
 ```
-sudo apt-get -y install libcurl4-gnutls-dev libxml2-dev libssl-dev nginx
+sudo apt-get -y install libcurl4-gnutls-dev libxml2-dev libssl-dev libcurl4-openssl-dev nginx
+```
+Consider the next lines for use rmkarkdown
+
+```
+sudo apt-get install tex
+sudo apt-get install texlive-latex-recommended
 ```
 
 ## Installing main packages
 
 ```
-sudo su - -c "R -e \"install.packages(c('devtools', 'tidyverse', 'shiny'), repos='http://cran.rstudio.com/')\""
+sudo su - -c "R -e \"install.packages(c('devtools', 'tidyverse', 'shiny', 'rmarkdown'), repos='http://cran.rstudio.com/')\""
 sudo su - -c "R -e \"devtools::install_github('jbkunst/highcharter')\""
 ```
 
@@ -51,67 +57,8 @@ sudo apt-get install git
 git config --global user.email "jbkunst@gmail.com"
 git config --global user.name "Joshua"
 ```
-Generate Key
+Generate Key if you want to push from the server
 ```
 ssh-keygen
 cat ~/.ssh/id_rsa.pub
-```
-
-## Python
-```
-apt-get install python-dev
-```
-
-PIP
-```
-sudo apt-get install python-pip
-```
-
-How to use pip
-```
-sudo pip-python install virtualenv
-pip freeze > requieriments.txt
-pip install -r requieriments.txt
-```
-
-Virtualenv
-```
-sudo apt-get install python-virtualenv
-```
-
-How to use virtualenv
-```
-virtualenv myenv
-source myenv
-deactivate myenv
-```
-
-## R
-```
-sudo nano /etc/apt/sources.list    
-deb http://cran.rstudio.com/bin/linux/ubuntu saucy/
-```
-
-```
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
-```
-
-```
-sudo add-apt-repository ppa:marutter/rdev
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install r-base
-```
-
-Don't forget execute the next line in the terminal for install "curl" packages:
-
-```
-sudo apt-get install libcurl4-openssl-dev
-```
-
-Consider the next lines for use rmkarkdown
-
-```
-sudo apt-get install tex
-sudo apt-get install texlive-latex-recommended
 ```
