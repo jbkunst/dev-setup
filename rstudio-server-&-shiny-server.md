@@ -35,9 +35,16 @@ sudo apt-get install texlive-latex-recommended
 ## Installing main packages
 
 ```
-sudo su - -c "R -e \"install.packages(c('devtools', 'tidyverse', 'shiny', 'shinythemes', 'rmarkdown'), repos='http://cran.rstudio.com/')\""
+sudo su - -c "R -e \"install.packages(c('devtools', 'tidyverse', 'shiny', 'shinythemes', 'shinydashboard', 'flexdashboard', 'rmarkdown'), repos='http://cran.rstudio.com/')\""
 sudo su - -c "R -e \"devtools::install_github('jbkunst/highcharter')\""
 ```
+
+Extra packages
+
+```
+sudo su - -c "R -e \"install.packages(c('leaflet', 'DT'), repos='http://cran.rstudio.com/')\""
+```
+
 
 Example 
 
