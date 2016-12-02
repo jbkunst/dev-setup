@@ -29,7 +29,7 @@ sudo apt-get -y install libcurl4-gnutls-dev libxml2-dev libssl-dev nginx
 ## Installing main packages
 
 ```
-sudo su - -c "R -e \"install.packages(c('devtools', 'tidyerse', 'shiny'), repos='http://cran.rstudio.com/')\""
+sudo su - -c "R -e \"install.packages(c('devtools', 'tidyverse', 'shiny'), repos='http://cran.rstudio.com/')\""
 sudo su - -c "R -e \"devtools::install_github('jbkunst/highcharter')\""
 ```
 
