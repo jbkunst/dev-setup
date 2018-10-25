@@ -6,6 +6,13 @@ git config --global user.email "jbkunst@gmail.com"
 git config --global user.name "Joshua"
 ```
 
+## Generate Key
+```
+ssh-keygen
+cat ~/.ssh/id_rsa.pub
+```
+
+
 ## Delete back to specific commit on remote repository with Git
 ```
 git reset --hard fj5789sufj
