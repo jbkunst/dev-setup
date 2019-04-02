@@ -31,3 +31,11 @@ source: https://help.github.com/articles/merging-an-upstream-repository-into-you
 git config --global credential.helper wincred
 ```
 source: https://help.github.com/articles/caching-your-github-password-in-git/
+
+## Provide username and password when clone a repo
+
+```
+git clone https://username:password@github.com/username/repository.git
+```
+
+Source: https://stackoverflow.com/questions/10054318/how-do-i-provide-a-username-and-password-when-running-git-clone-gitremote-git
