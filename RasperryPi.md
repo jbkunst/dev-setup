@@ -22,4 +22,6 @@ cd ..
 rm -rf R-4.0.3*
 exit
 cd
+
+apt install r-base-core
 ```
