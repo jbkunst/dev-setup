@@ -31,6 +31,7 @@ apt install r-base-core
 # install.packages("pak", repos = "https://r-lib.github.io/p/pak/dev/")
 # core
 install.packages(c("tidyverse", "shiny"))
+tidyverse::tidyverse_update()
 
 # ggplot2
 install.packages(c("ggforce", "patchwork"))
