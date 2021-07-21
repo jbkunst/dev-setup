@@ -58,8 +58,10 @@ apt install r-base-core
 From R:
 
 ```
-# install.packages("pak", repos = "https://r-lib.github.io/p/pak/dev/")
+install.packages("pak", repos = "https://r-lib.github.io/p/pak/dev/")
 # core
+pak::pkg_system_requirements("tidyverse")
+
 install.packages(c("tidyverse", "shiny"))
 tidyverse::tidyverse_update()
 
