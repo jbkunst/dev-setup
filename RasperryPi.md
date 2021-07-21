@@ -55,6 +55,14 @@ apt install r-base-core
 
 ### R packages
 
+System requiriments according
+
+https://packagemanager.rstudio.com/client/#/repos/1/packages/tidyverse
+
+```
+sudo apt-get install -y libicu-dev zlib1g-dev make libcurl4-openssl-dev libssl-dev pandoc libxml2-dev
+```
+
 From R:
 
 ```
@@ -74,4 +82,35 @@ From terminal/console:
 ```
 sudo su - -c "R -e \"install.packages(c('tidyverse', 'shiny'), repos='http://cran.rstudio.com/')\""
 ```
+
+## FTP
+
+Source https://www.wikihow.com/Set-up-an-FTP-Server-in-Ubuntu-Linux
+
+```
+sudo apt-get install vsftpd
+sudo nano /etc/vsftpd.conf
+```
+
+Then uncomment or write:
+
+```
+local_enable=YES
+write_enable=YES
+
+ascii_upload_enable=YES
+ascii_download_enable=YES
+
+chroot_local_user=YES
+chroot_list_enable=YES
+
+chroot_list_file=/etc/vsftpd.chroot_list
+ls_recurse_enable=YES
+```
+
+Add the users in the next list, for example _ubuntu_.
+```
+sudo nano /etc/vsftpd.chroot_list
+sudo systemctl restart vsftpd
+``` 
 
