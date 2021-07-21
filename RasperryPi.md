@@ -24,3 +24,16 @@ exit
 cd
 apt install r-base-core
 ```
+
+# R packages
+
+```
+# install.packages("pak", repos = "https://r-lib.github.io/p/pak/dev/")
+# core
+install.packages(c("tidyverse", "shiny"))
+
+# ggplot2
+install.packages(c("ggforce", "patchwork"))
+
+
+```
