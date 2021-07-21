@@ -114,3 +114,36 @@ sudo nano /etc/vsftpd.chroot_list
 sudo systemctl restart vsftpd
 ``` 
 
+## Wifi
+
+Source https://gist.github.com/Jiab77/76000284f8200da5019a232854421564
+
+Now check your interfaces names with `ip link show` or `iwconfig`. You'll need them to create the configuration required by `netplan`.
+
+So, edit the file `/etc/netplan/your-config-file.yaml` and add or change the following:
+
+```yaml
+# This file is generated from information provided by
+# the datasource.  Changes to it will not persist across an instance.
+# To disable cloud-init's network configuration capabilities, write a file
+# /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg with the following:
+# network: {config: disabled}
+network:
+    version: 2
+    renderer: networkd
+    # Renderer can be 'networkd' or 'NetworkManager'
+    ethernets:
+        eth0:
+            optional: true
+            dhcp4: false
+    wifis:
+        wlan0:
+            optional: true
+            dhcp4: true
+            access-points:
+                "YOUR-SSID-NAME":
+                    password: "YOUR-PASSWORD"
+            # uncomment the line below if you're using a Microsoft DHCP Server
+            #dhcp-identifier: mac
+```
+
