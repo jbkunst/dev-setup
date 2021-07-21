@@ -10,8 +10,9 @@ sudo nano /etc/hosts
 sudo reboot
 ```
 
-# R v4.0.3
+# R
 
+## Compile  v4.0.3
 Compile R v4.0.3. Sources:
 
 - https://www.arencambre.com/2020/11/29/installing-r-on-raspberry-pi-4-with-ubuntu-20-10-64-bit/
@@ -37,7 +38,10 @@ cd
 apt install r-base-core
 ```
 
-# R packages
+## R packages
+
+
+From R:
 
 ```
 # install.packages("pak", repos = "https://r-lib.github.io/p/pak/dev/")
@@ -47,6 +51,11 @@ tidyverse::tidyverse_update()
 
 # ggplot2
 install.packages(c("ggforce", "patchwork"))
+```
 
+From terminal/console:
 
 ```
+sudo su - -c "R -e \"install.packages(c('tidyverse', 'shiny'), repos='http://cran.rstudio.com/')\""
+```
+
