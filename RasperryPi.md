@@ -6,9 +6,6 @@
 | rasperrypi-mark-i-8gb  | 192.168.100.65 |
 | rasperrypi-mark-ii-8gb | comming soon   |
 
-
-[192.168.100.65
-
 ## Change the hostname/computer name
 
 https://www.hepeng.me/changing-username-and-hostname-on-ubuntu/
