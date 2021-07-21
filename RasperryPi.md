@@ -1,4 +1,6 @@
-# Change the hostname/computer name
+# RasperryPi
+
+## Change the hostname/computer name
 
 https://www.hepeng.me/changing-username-and-hostname-on-ubuntu/
 
@@ -10,9 +12,22 @@ sudo nano /etc/hosts
 sudo reboot
 ```
 
-# R
+## git
 
-## Compile  v4.0.3
+```
+sudo apt-get install git
+git config --global user.email "jbkunst@gmail.com"
+git config --global user.name "Joshua"
+```
+Generate Key if you want to push from the server
+```
+ssh-keygen
+cat ~/.ssh/id_rsa.pub
+```
+
+## R
+
+### Compile  v4.0.3
 Compile R v4.0.3. Sources:
 
 - https://www.arencambre.com/2020/11/29/installing-r-on-raspberry-pi-4-with-ubuntu-20-10-64-bit/
@@ -38,8 +53,7 @@ cd
 apt install r-base-core
 ```
 
-## R packages
-
+### R packages
 
 From R:
 
