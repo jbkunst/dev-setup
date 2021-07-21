@@ -114,9 +114,12 @@ sudo nano /etc/vsftpd.chroot_list
 sudo systemctl restart vsftpd
 ``` 
 
-## Wifi
+## Wifi and static IP
 
-Source https://gist.github.com/Jiab77/76000284f8200da5019a232854421564
+Sources:
+- https://gist.github.com/Jiab77/76000284f8200da5019a232854421564
+- https://pimylifeup.com/ubuntu-20-04-static-ip-address/
+- https://superuser.com/questions/1464492/what-does-16-24-mean-with-regards-to-ip-addresses
 
 Now check your interfaces names with `ip link show` or `iwconfig`. You'll need them to create the configuration required by `netplan`.
 
@@ -129,21 +132,27 @@ So, edit the file `/etc/netplan/your-config-file.yaml` and add or change the fol
 # /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg with the following:
 # network: {config: disabled}
 network:
-    version: 2
-    renderer: networkd
-    # Renderer can be 'networkd' or 'NetworkManager'
     ethernets:
         eth0:
+            dhcp4: true
             optional: true
-            dhcp4: false
+    version: 2
     wifis:
         wlan0:
             optional: true
-            dhcp4: true
+            dhcp4: no
+            dhcp6: no
+            addresses: [FIXEDIP/24]
+            gateway4: ROUTERIP
+            nameservers:
+                addresses: [8.8.8.8,8.8.4.4]
             access-points:
-                "YOUR-SSID-NAME":
-                    password: "YOUR-PASSWORD"
-            # uncomment the line below if you're using a Microsoft DHCP Server
-            #dhcp-identifier: mac
+                "myNetwork":
+                    password: "myPassword"
 ```
+
+```
+sudo netplan apply
+```
+
 
