@@ -4,7 +4,7 @@
 | hostname               | IP             |
 |------------------------|----------------|
 | rasperrypi-mark-i-8gb  | 192.168.100.65 |
-| rasperrypi-mark-ii-8gb | comming soon   |
+| rasperrypi-mark-ii-2gb | comming soon   |
 
 ## Change the hostname/computer name
 
@@ -99,6 +99,8 @@ sudo apt install r-cran-dplyr
 
 ## FTP
 
+This is optional but sometimes I use notepad++ and FTP plugin to edit files avoiding use nano, vim, others.
+
 Source https://www.wikihow.com/Set-up-an-FTP-Server-in-Ubuntu-Linux
 
 ```
@@ -171,4 +173,21 @@ network:
 sudo netplan apply
 ```
 
+## shiny-server and rstudio-server
+
+From https://www.rstudio.com/products/shiny/download-server/ubuntu/, Ussually we 
+do the next lines, BUT rasperry Pi have ASR ar
+
+```
+sudo apt-get install gdebi-core
+wget https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.16.958-amd64.deb
+sudo gdebi shiny-server-1.5.16.958-amd64.deb
+```
+
+```
+sudo apt install r-cran-later r-cran-fs  r-cran-rcpp r-cran-httpuv r-cran-jsonlite r-cran-digest r-cran-htmltools r-cran-xtable r-cran-r6 r-cran-cairo r-cran-sourcetools r-cran-shiny
+
+sudo apt-get install python cmake gcc cpp git
+
+```
 
