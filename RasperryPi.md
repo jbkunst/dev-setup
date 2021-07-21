@@ -142,10 +142,12 @@ network:
             optional: true
             dhcp4: no
             dhcp6: no
-            addresses: [FIXEDIP/24]
-            gateway4: ROUTERIP
+            # addresses: [FIXEDIP/24]
+            addresses: [192.168.100.65/24]
+            # gateway4: ROUTERIP
+            gateway4: 192.168.100.1
             nameservers:
-                addresses: [8.8.8.8,8.8.4.4]
+                addresses: [192.168.100.1, 8.8.8.8,8.8.4.4]
             access-points:
                 "myNetwork":
                     password: "myPassword"
