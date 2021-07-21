@@ -1,7 +1,9 @@
-Compile R v4.0.3
+# R v4.0.3
 
-https://www.arencambre.com/2020/11/29/installing-r-on-raspberry-pi-4-with-ubuntu-20-10-64-bit/
-https://stackoverflow.com/a/65093648/829971
+Compile R v4.0.3. Sources:
+
+- https://www.arencambre.com/2020/11/29/installing-r-on-raspberry-pi-4-with-ubuntu-20-10-64-bit/
+- https://stackoverflow.com/a/65093648/829971
 
 ```
 sudo apt-get install -y gfortran libreadline6-dev libx11-dev libxt-dev libpng-dev libjpeg-dev libcairo2-dev xvfb libzstd-dev texinfo texlive texlive-fonts-extra screen wget zlib1g-dev libbz2-dev liblzma-dev libpcre2-dev libcurl4-openssl-dev openjdk-11-jdk
