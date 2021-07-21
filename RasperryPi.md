@@ -1,3 +1,15 @@
+# Change the hostname/computer name
+
+https://www.hepeng.me/changing-username-and-hostname-on-ubuntu/
+
+Host name `rasperrypi-mark-i-8gb`.
+
+```
+sudo nano /etc/hostname
+sudo nano /etc/hosts
+sudo reboot
+```
+
 # R v4.0.3
 
 Compile R v4.0.3. Sources:
