@@ -89,6 +89,14 @@ From terminal/console:
 sudo su - -c "R -e \"install.packages(c('tidyverse', 'shiny'), repos='http://cran.rstudio.com/')\""
 ```
 
+Ubuntu binaries
+
+Source https://www.jumpingrivers.com/blog/faster-r-package-installation-rstudio/
+
+```
+sudo apt install r-cran-dplyr
+```
+
 ## FTP
 
 Source https://www.wikihow.com/Set-up-an-FTP-Server-in-Ubuntu-Linux
