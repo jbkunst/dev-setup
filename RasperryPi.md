@@ -6,6 +6,12 @@
 | rasperrypi-mark-i-8gb  | 192.168.100.65 |
 | rasperrypi-mark-ii-2gb | comming soon   |
 
+## First of all
+
+```
+sudo apt update && sudo apt upgrade -y
+```
+
 ## Change the hostname/computer name
 
 https://www.hepeng.me/changing-username-and-hostname-on-ubuntu/
@@ -18,86 +24,7 @@ sudo nano /etc/hosts
 sudo reboot
 ```
 
-## git
-
-```
-sudo apt-get install git
-git config --global user.email "jbkunst@gmail.com"
-git config --global user.name "Joshua"
-```
-Generate Key if you want to push from the server
-```
-ssh-keygen
-cat ~/.ssh/id_rsa.pub
-```
-
-## R
-
-### Compile  v4.0.3
-Compile R v4.0.3. Sources:
-
-- https://www.arencambre.com/2020/11/29/installing-r-on-raspberry-pi-4-with-ubuntu-20-10-64-bit/
-- https://stackoverflow.com/a/65093648/829971
-
-```
-sudo apt-get install -y gfortran libreadline6-dev libx11-dev libxt-dev libpng-dev libjpeg-dev libcairo2-dev xvfb libzstd-dev texinfo texlive texlive-fonts-extra screen wget zlib1g-dev libbz2-dev liblzma-dev libpcre2-dev libcurl4-openssl-dev openjdk-11-jdk
-
-sudo apt-get install -y g++ gfortran libreadline6-dev libx11-dev libxt-dev libpng-dev libjpeg-dev libcairo2-dev xvfb libbz2-dev libzstd-dev liblzma-dev libcurl4-openssl-dev texinfo texlive texlive-fonts-extra screen wget libpcre2-dev zlib1g-dev libbz2-dev liblzma-dev libpcre2-dev libcurl4-openssl-dev openjdk-11-jdk make
-
-cd /usr/local/src
-sudo wget https://cran.rstudio.com/src/base/R-4/R-4.0.3.tar.gz
-sudo su
-tar zxvf R-4.0.3.tar.gz
-cd R-4.0.3
-./configure --enable-R-shlib
-make
-make install
-cd ..
-rm -rf R-4.0.3*
-exit
-cd
-apt install r-base-core
-```
-
-### R packages
-
-System requiriments according
-
-https://packagemanager.rstudio.com/client/#/repos/1/packages/tidyverse
-
-```
-sudo apt-get install -y libicu-dev zlib1g-dev make libcurl4-openssl-dev libssl-dev pandoc libxml2-dev
-```
-
-From R:
-
-```
-install.packages("pak", repos = "https://r-lib.github.io/p/pak/dev/")
-# core
-pak::pkg_system_requirements("tidyverse")
-
-install.packages(c("tidyverse", "shiny"))
-tidyverse::tidyverse_update()
-
-# ggplot2
-install.packages(c("ggforce", "patchwork"))
-```
-
-From terminal/console:
-
-```
-sudo su - -c "R -e \"install.packages(c('tidyverse', 'shiny'), repos='http://cran.rstudio.com/')\""
-```
-
-Ubuntu binaries
-
-Source https://www.jumpingrivers.com/blog/faster-r-package-installation-rstudio/
-
-```
-sudo apt install r-cran-dplyr
-```
-
-## FTP
+## FTP (Optional)
 
 This is optional but sometimes I use notepad++ and FTP plugin to edit files avoiding use nano, vim, others.
 
@@ -129,6 +56,112 @@ Add the users in the next list, for example _ubuntu_.
 sudo nano /etc/vsftpd.chroot_list
 sudo systemctl restart vsftpd
 ``` 
+
+sometimes accordin who owns the path:
+
+```
+sudo chown -R ubuntu /etc/netplan/
+```
+
+Where _ubuntu_ is the user.
+
+
+## git
+
+```
+sudo apt-get install git
+git config --global user.email "jbkunst@gmail.com"
+git config --global user.name "Joshua"
+```
+Generate Key if you want to push from the server
+```
+ssh-keygen
+cat ~/.ssh/id_rsa.pub
+```
+
+## R
+
+From https://www.rostrum.blog/2020/07/11/raspberry/#r
+
+```
+sudo apt-get install r-base r-base-core r-base-dev
+```
+
+New version of R from https://medium.com/@hpgomide/how-to-update-your-r-3-x-to-the-r-4-x-in-your-linux-ubuntu-46e2209409c3
+
+```
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'
+```
+
+
+### R packages
+
+System requiriments according
+
+https://packagemanager.rstudio.com/client/#/repos/1/packages/tidyverse
+
+```
+sudo apt-get install -y libicu-dev zlib1g-dev make libcurl4-openssl-dev libssl-dev pandoc libxml2-dev
+
+# view ubuntu binaries below
+sudo apt install r-cran-tidyverse
+```
+From R:
+
+```
+install.packages("pak", repos = "https://r-lib.github.io/p/pak/dev/")
+# core
+pak::pkg_system_requirements("tidyverse")
+
+install.packages(c("tidyverse", "shiny"))
+tidyverse::tidyverse_update()
+
+# ggplot2
+install.packages(c("ggforce", "patchwork"))
+```
+
+From terminal/console:
+
+```
+sudo su - -c "R -e \"install.packages(c('tidyverse', 'shiny'), repos='http://cran.rstudio.com/')\""
+```
+
+Ubuntu binaries
+
+Source https://www.jumpingrivers.com/blog/faster-r-package-installation-rstudio/
+
+```
+sudo apt install r-cran-dplyr
+```
+
+
+### Compile R v4.0.3
+Compile R v4.0.3. Sources:
+
+- https://www.arencambre.com/2020/11/29/installing-r-on-raspberry-pi-4-with-ubuntu-20-10-64-bit/
+- https://stackoverflow.com/a/65093648/829971
+
+```
+sudo apt-get install -y gfortran libreadline6-dev libx11-dev libxt-dev libpng-dev libjpeg-dev libcairo2-dev xvfb libzstd-dev texinfo texlive texlive-fonts-extra screen wget zlib1g-dev libbz2-dev liblzma-dev libpcre2-dev libcurl4-openssl-dev openjdk-11-jdk
+
+sudo apt-get install -y g++ gfortran libreadline6-dev libx11-dev libxt-dev libpng-dev libjpeg-dev libcairo2-dev xvfb libbz2-dev libzstd-dev liblzma-dev libcurl4-openssl-dev texinfo texlive texlive-fonts-extra screen wget libpcre2-dev zlib1g-dev libbz2-dev liblzma-dev libpcre2-dev libcurl4-openssl-dev openjdk-11-jdk make
+
+cd /usr/local/src
+sudo wget https://cran.rstudio.com/src/base/R-4/R-4.0.3.tar.gz
+sudo su
+tar zxvf R-4.0.3.tar.gz
+cd R-4.0.3
+./configure --enable-R-shlib
+make
+make install
+cd ..
+rm -rf R-4.0.3*
+exit
+cd
+apt install r-base-core
+```
+
 
 ## Wifi and static IP
 
