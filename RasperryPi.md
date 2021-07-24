@@ -224,3 +224,56 @@ sudo apt-get install python cmake gcc cpp git
 
 ```
 
+## dht sensor 
+
+https://www.youtube.com/watch?v=GsG1OClojOk&ab_channel=TheGeekPub
+https://www.thegeekpub.com/236867/using-the-dht11-temperature-sensor-with-the-raspberry-pi/
+
+```
+sudo apt-get install python3
+sudo apt-get install python3-pip
+sudo pip3 install Adafruit_DHT
+```
+
+In python
+
+```
+import Adafruit_DHT
+import time
+ 
+DHT_SENSOR = Adafruit_DHT.DHT11
+DHT_PIN = 4
+ 
+humidity, temperature = Adafruit_DHT.read(DHT_SENSOR, DHT_PIN)
+print("Temp={0:0.1f}C Humidity={1:0.1f}%".format(temperature, humidity))
+```
+
+In R, before make sure have {reticulate} with `sudo apt-get install r-cran-reticulate` or alternatives.
+
+Zeallot package will be usefull too `sudo apt-get install r-cran-zeallot`
+
+```
+library(zeallot)
+library(reticulate)
+use_python(python = Sys.which("python3"), required = TRUE)
+py_config()
+
+ada <- import("Adafruit_DHT")
+
+DHT_SENSOR <- ada$DHT11
+DHT_PIN <- 4
+
+ada$read(DHT_SENSOR, DHT_PIN)
+
+c(humidity, temperature) %<-% ada$read(DHT_SENSOR, DHT_PIN)
+
+humidity
+temperature
+```
+
+
+
+
+
+
+
