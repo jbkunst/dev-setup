@@ -1,1 +1,1 @@
-This scripts are for RPi
+These scripts are for RPi
