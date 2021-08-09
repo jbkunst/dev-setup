@@ -25,7 +25,7 @@ git clone https://github.com/rstudio/shiny-server.git
 
 ## Copy the custom install-node.sh into the shiny-server file. This makes sure the right node version
 ## is downloaded from npm for ARM processors.
-cp ~/dev-reminders/bash/stable_support_files/install-node.sh ~/shiny-server/external/node/install-node.sh 
+cp ~/dev-setup/rpi/stable_support_files/install-node.sh ~/shiny-server/external/node/install-node.sh 
 
 ## Build Shiny Server
 ~/shiny-server/packaging/make-package.sh
