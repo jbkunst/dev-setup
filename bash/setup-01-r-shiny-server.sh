@@ -10,6 +10,7 @@ sudo apt-get -y update && sudo apt-get -y upgrade
 
 # Install R
 sudo apt-get -y install r-base
+sudo apt install r-base-core
 
 
 # Install cmake: https://github.com/rstudio/shiny-server/wiki/Building-Shiny-Server-from-Source#what-if-a-sufficiently-recent-version-of-cmake-isnt-available
