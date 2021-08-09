@@ -8,6 +8,10 @@ cd ~ || return
 # Update/Upgrade Raspberry Pi
 sudo apt-get -y update && sudo apt-get -y upgrade
 
+# Install R
+sudo apt-get -y install r-base
+
+
 # Install cmake: https://github.com/rstudio/shiny-server/wiki/Building-Shiny-Server-from-Source#what-if-a-sufficiently-recent-version-of-cmake-isnt-available
 sudo apt-get -y install libssl-dev libcurl4-openssl-dev cmake
 
