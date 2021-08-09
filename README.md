@@ -1,4 +1,4 @@
-`git clone git@github.com:jbkunst/dev-reminders.git`
+`git clone https://github.com/jbkunst/dev-reminders.git`
 
 # never-forget
 
